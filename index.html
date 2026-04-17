@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Responsivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Sitio Web</h1>
+        <button id="menu-toggle" class="menu-btn">&#9776;</button>
+    </header>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="Home.php">Home</a></li>
+            <li><a href="AltaUsuario.php">Alta</a></li>
+            <li><a href="Acceso.php">Acceso</a></li>
+            <li><a href="VerUsuario.php">Ver</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Bienvenido</h2>
+        <p>Selecciona una opción del menú para continuar.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("activo");
+        });
+    </script>
+
+</body>
+</html>
