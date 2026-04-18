@@ -12,31 +12,39 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <div class="card shadow-lg">
-                    <div class="card-header bg-primary text-white text-center">
-                        <h4>Iniciar Sesión</h4>
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="mb-0">Iniciar Sesión</h4>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body p-4">
                         <?php if(isset($_GET['error'])): ?>
-                            <div class="alert alert-danger p-2 text-center">
-                                Usuario o contraseña incorrectos
+                            <div class="alert alert-danger p-2 text-center small">
+                                Datos incorrectos. Verifica ID, Nombre, Correo y Pass.
                             </div>
                         <?php endif; ?>
 
                         <form action="login_proceso.php" method="POST">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="tu@correo.com" required>
+                                <label class="form-label small fw-bold">ID de Usuario</label>
+                                <input type="number" name="id_usuario" class="form-control" placeholder="Ej: 1" required>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" name="password" id="password" class="form-control" required>
+                                <label class="form-label small fw-bold">Nombre Completo</label>
+                                <input type="text" name="nombre" class="form-control" placeholder="Como aparece en BD" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Correo Electrónico</label>
+                                <input type="email" name="email" class="form-control" placeholder="tu@correo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Contraseña</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-2">Entrar al Sistema</button>
                         </form>
                     </div>
-                    <div class="card-footer text-center">
-                        <p class="mb-0">¿No tienes cuenta? <a href="registro.php">Regístrate aquí</a></p>
+                    <div class="card-footer text-center bg-white">
+                        <p class="mb-0 small">¿No tienes cuenta? <a href="registro.php" class="text-decoration-none">Regístrate aquí</a></p>
                     </div>
                 </div>
             </div>
